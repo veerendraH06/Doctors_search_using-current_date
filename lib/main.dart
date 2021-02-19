@@ -1,3 +1,4 @@
+import 'package:doctor_appointment/screen/detailspage.dart';
 import 'package:doctor_appointment/screen/doctorsAppointment.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: DoctorsAppoint(),
+      home: Details_Page(),
     );
   }
 }

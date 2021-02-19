@@ -37,13 +37,7 @@ class _DoctorsAppointState extends State<DoctorsAppoint> {
   }
 
   getSelectedDateAppointments() {
-    //   for (var i = 0; i < allData.length; i++) {
-    //     Map<String, dynamic> appItem = allData[i];
-    //     if (appItem['date'] == _selectedValue.toString()) {
-    //       print(appItem);
-    //     }
-    //
-    // }
+
     appointmentData = allData.where((element) {
 
       Map<String, dynamic> appItem = element;
