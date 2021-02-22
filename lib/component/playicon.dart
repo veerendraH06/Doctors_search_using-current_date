@@ -104,6 +104,7 @@ class RecorderExampleState extends State<RecorderExample>
               children: [
                 Container(child:
                 Visibility(
+
                   maintainSize: true,
                   maintainAnimation: true,
                   maintainState: true,
@@ -239,16 +240,7 @@ class RecorderExampleState extends State<RecorderExample>
                   ),
                 ],
               ),
-              // new Text("Status : $_currentStatus"),
-              // new Text('Avg Power: ${_current?.metering?.averagePower}'),
-              // new Text('Peak Power: ${_current?.metering?.peakPower}'),
-              // new Text("File path of the record: ${_current?.path}"),
-              // new Text("Format: ${_current?.audioFormat}"),
-              // new Text(
-              //     "isMeteringEnabled: ${_current?.metering?.isMeteringEnabled}"),
-              // new Text("Extension : ${_current?.extension}"),
-              // new Text(
-              //     "Audio recording duration : ${_current?.duration.toString()}")
+
             ]),
       ),
     );
@@ -264,6 +256,7 @@ class RecorderExampleState extends State<RecorderExample>
 
   _init() async {
     try {
+      viewVisible=false;
       if (await FlutterAudioRecorder.hasPermissions) {
         String customPath = '/flutter_audio_recorder_';
         io.Directory appDocDirectory;
