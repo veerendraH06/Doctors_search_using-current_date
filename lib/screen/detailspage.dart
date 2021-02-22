@@ -115,7 +115,11 @@ class _Details_PageState extends State<Details_Page> with SingleTickerProviderSt
               children: [
 
                 FlatButton(onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>PlayIcon()));
+                  showModalBottomSheet(context: context, builder: (BuildContext context){
+                    return Card(child: Container(height: 600,
+                    child: PlayIcon(),),);
+                  },);
+                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>PlayIcon()));
                 },
                     child: Container(
                       child: Icon(

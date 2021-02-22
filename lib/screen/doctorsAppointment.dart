@@ -2,6 +2,9 @@ import 'dart:convert';
 
 import 'package:doctor_appointment/common/colors.dart';
 import 'package:doctor_appointment/common/string.dart';
+import 'package:doctor_appointment/component/playicon.dart';
+import 'package:doctor_appointment/screen/detailspage.dart';
+import 'package:doctor_appointment/screen/popup.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:date_picker_timeline/date_picker_timeline.dart';
@@ -201,6 +204,9 @@ class _DoctorsAppointState extends State<DoctorsAppoint> {
                                               Map<String, dynamic> item =
                                                   appointmentData[index];   /// convert note data to map
                                               return ListTile(
+                                                onTap: (){
+                                                  Navigator.push(context, MaterialPageRoute(builder: (context) => Details_Page(),),);
+                                                },
                                                 contentPadding:
                                                     EdgeInsets.all(0),
                                                 leading: Icon(
@@ -265,8 +271,10 @@ class _DoctorsAppointState extends State<DoctorsAppoint> {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: DoctorColors.Dblue,
-        onPressed: () {},
-        child: Icon(Icons.add),
+        onPressed: () {
+          // FabPopupMenu();
+          },
+        child:FabPopupMenu(),
       ),
     );
   }
